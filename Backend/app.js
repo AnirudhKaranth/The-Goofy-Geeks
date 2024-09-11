@@ -3,12 +3,12 @@ import path from 'path';
 import cookieparser from 'cookie-parser'
 const __dirname = path.resolve();
 const app = express();
+import 'dotenv/config';
 
 
 import cors from 'cors'
 app.use(cors());
 
-import mysql from 'mysql2'
 
 import connection from './database.js';
 import errorHandlerMiddleware from './middlewares/errorHandler.js';
@@ -19,7 +19,7 @@ import otherRouter from './routes/otherRoutes.js'
 import checkUser from './middlewares/checkUser.js';
 
 
-const port = 5000;
+const port = 8000;
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(cookieparser())

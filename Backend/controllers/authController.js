@@ -51,6 +51,8 @@ export const login = async (req, res, next) => {
             return next(createCustomError("Please provide all values", 400));
         }
 
+        console.log(email)
+
         connection.query(`SELECT * FROM members WHERE Uname = "${email}" `, (err, results) => {
             if (err) throw err;
             if (results.length === 0) {

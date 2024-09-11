@@ -13,7 +13,7 @@ const submitForm=
         
         }
 
-        fetch("http://localhost:5000/api/v1/auth/signUp",{
+        fetch("http://localhost:8000/api/v1/auth/signUp",{
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json'
